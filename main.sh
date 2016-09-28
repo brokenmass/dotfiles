@@ -1,4 +1,5 @@
 # Main
+source $BASH_PROFILE_DIR/config.sh
 source $BASH_PROFILE_DIR/tokens.sh
 source $BASH_PROFILE_DIR/src/colors.sh
 source $BASH_PROFILE_DIR/src/git.sh

@@ -1,6 +1,5 @@
-# Node version management
-export NVM_DIR="/Users/marcomassarotto/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Grab and install latest node version
 alias updateNode="nvm install node --reinstall-packages-from=node"

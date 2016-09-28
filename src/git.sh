@@ -5,6 +5,10 @@ alias gitpurge="git fetch -p && git branch -vv | grep ': gone]' | grep -v '\[ori
 # Disabled for the moment. Need ot decide if subl is better than vim for git diff
 # export EDITOR=/usr/local/bin/subl
 
+find_github_url () {
+  echo `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/https:\/\//' | sed 's/com:/com\//' | sed 's/\.git//'`
+}
+
 find_git_branch() {
   local branch
   if branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null); then
@@ -34,3 +38,14 @@ find_git_dirty() {
 }
 
 PROMPT_COMMAND="find_git_branch; $PROMPT_COMMAND"
+
+gitrepo () {
+  open -a /Applications/Google\ Chrome.app "$(find_github_url)";
+}
+
+gitpr () {
+  local branch
+  if branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null); then
+    open -a /Applications/Google\ Chrome.app "$(find_github_url)/compare/next-release...$branch?expand=1";
+  fi
+}

@@ -15,4 +15,5 @@ cat <<< "
 export BASH_PROFILE_DIR=$PROJECT_DIR
 source \$BASH_PROFILE_DIR/main.sh
 " > ~/.bash_profile
-#  src/git/prompt.sh
+
+vi config.sh

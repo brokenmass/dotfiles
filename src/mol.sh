@@ -1,6 +1,3 @@
-# Root folder of your Mol projects
-export MOL_DIR=~/dev
-
 # Finds and open any valid mol project
 mol () {
   PROJECT_DIR=$(find $MOL_DIR -maxdepth 2 -mindepth 2 -type d -name "*$1*$2*" | head -1)
