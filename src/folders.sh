@@ -37,4 +37,5 @@ cd () {
   fi
 }
 
-mcd () { mkdir -p "$1" && cd "$1"; }               # Makes new Dir and jumps inside
+# Makes new Dir and jumps inside
+mcd () { mkdir -p "$1" && cd "$1"; }
